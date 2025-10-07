@@ -1,0 +1,4 @@
+---
+
+- name: Import example playbook
+  import_playbook: ../../playbooks/syntax_highlighting_example.yml

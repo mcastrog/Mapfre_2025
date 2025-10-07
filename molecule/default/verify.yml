@@ -1,0 +1,21 @@
+---
+- name: Verify file exists and content
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Check test1.txt exists
+      ansible.builtin.stat:
+        path: /tmp/test1.txt
+      register: test1
+      failed_when: not test1.stat.exists
+
+    - name: Check test1.txt content
+      ansible.builtin.slurp:
+        src: /tmp/test1.txt
+      register: test1_content
+
+    - name: Assert file content is correct
+      ansible.builtin.assert:
+        that:
+          - "'Hello World' in (test1_content.content | b64decode)"
+        fail_msg: "Content of /tmp/test1.txt is not as expected"

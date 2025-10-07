@@ -1,0 +1,19 @@
+---
+
+driver:
+  name: delegated
+
+platforms:
+  - name: localhost
+
+provisioner:
+  name: ansible
+  inventory:
+    hosts:
+      localhost:
+        ansible_connection: local
+  playbooks:
+    converge: converge.yml
+
+verifier:
+  name: ansible
