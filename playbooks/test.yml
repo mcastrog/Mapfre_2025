@@ -1,0 +1,28 @@
+---
+- name: Create test files for Molecule verification
+  hosts: localhost
+  gather_facts: false
+
+  vars:
+    files_to_create:
+      - path: /home/runner/tmp/test1.txt
+        content: "Hello World\n"
+      - path: /home/runner/tmp/test2.txt
+        content: "Configuration OK\n"
+
+  tasks:
+
+    - name: Create test files with expected content
+      ansible.builtin.copy:
+        dest: "{{ item.path }}"
+        content: "{{ item.content }}"
+        mode: "0644"
+      loop: "{{ files_to_create }}"
+      loop_control:
+        label: "{{ item.path }}"
+
+    - ansible.builtin.debug:
+        msg: "Created file {{ item.path }} with content: {{ item.content }}"
+      loop: "{{ files_to_create }}"
+      loop_control:
+        label: "{{ item.path }}" 

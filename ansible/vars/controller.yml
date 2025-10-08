@@ -14,26 +14,26 @@ controller_labels:
 
 controller_templates:
 
-  - name: <new_template_name>
-    description: <new_template_desc>
+  - name: "[SC25] Test Template"
+    description: "New Template created as part of SC25"
     job_type: run
-    inventory: <user_inventory>
+    inventory: Summit25
     project: <user_project>
-    playbook: playbooks/<playbook_file>
-    credential: <user_cred>
-    organization: <user_org>
+    playbook: playbooks/test.yml
+    credential: "AAP Credential"
+    organization: Summit25
     labels:
       - <user_label>
-    survey_enabled: true
-    survey_spec:
-      name: <survey_name>
-      description: <survey_desc>
-      spec:
-        - question_name: <question_name>
-          question_description: <question_desc>
-          required: true
-          type: text
-          max: 50
-          variable: <var_to_store_answer>
-          default: <default_answer>
-          new_question: true
+    # survey_enabled: true
+    # survey_spec:
+    #   name: <survey_name>
+    #   description: <survey_desc>
+    #   spec:
+    #     - question_name: <question_name>
+    #       question_description: <question_desc>
+    #       required: true
+    #       type: text
+    #       max: 50
+    #       variable: <var_to_store_answer>
+    #       default: <default_answer>
+    #       new_question: true

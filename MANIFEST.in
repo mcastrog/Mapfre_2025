@@ -1,0 +1,8 @@
+# ----------------------------------------------------
+# MANIFEST.in for Ansible Project Signing
+# This file tells ansible-sign which files to include
+# in the checksum manifest before signing.
+# ----------------------------------------------------
+# 1. Include the core automation content (recursively)
+# Include all YAML files in the 'playbooks' directory
+recursive-include playbooks *.yml

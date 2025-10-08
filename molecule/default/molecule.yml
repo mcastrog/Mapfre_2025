@@ -1,17 +1,16 @@
 ---
 
 driver:
-  name: delegated
+  name: default
 
 platforms:
-  - name: localhost
+  - name: instance
+    managed: false
+    host: localhost
+    image: none
 
 provisioner:
   name: ansible
-  inventory:
-    hosts:
-      localhost:
-        ansible_connection: local
   playbooks:
     converge: converge.yml
 
