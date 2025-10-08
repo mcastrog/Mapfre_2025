@@ -11,6 +11,11 @@
         content: "Configuration OK\n"
 
   tasks:
+    - name: Ensure test directory exists
+      ansible.builtin.file:
+        path: /home/runner/tmp
+        state: directory
+        mode: "0755"
 
     - name: Create test files with expected content
       ansible.builtin.copy:
