@@ -13,8 +13,8 @@ controller_templates:
     job_type: run
     inventory: Default Mapfre2025 Inventory
     project: Mapfre_2025
-    playbook: playbooks/test.yml
-    credential: 
+    playbook: "{{ local_clone_path }}/playbooks/test.yml"
+    credential:
       - "Linux Credential"
     organization: Mapfre2025
     labels:
