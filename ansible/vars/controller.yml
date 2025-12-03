@@ -1,10 +1,4 @@
 ---
-
-# Projects, Inventories, Inventory Sources, Labels, Credentials, Execution Environments, Job Templates, Workflow Job Templates
-
-
-### LABELS ###
-
 controller_labels:
   - name: Mapfre2025
     organization: Mapfre2025
@@ -17,11 +11,12 @@ controller_templates:
   - name: "[SC25] Test Template"
     description: "New Template created as part of SC25"
     job_type: run
-    inventory: Config as Code Inventory
-    project: Summit25 CICD Project
+    inventory: Default Mapfre2025 Inventory
+    project: Mapfre_2025
     playbook: playbooks/test.yml
-    credential: "Linux Credential"
-    organization: CaC
+    credential: 
+      - "Linux Credential"
+    organization: Mapfre2025
     labels:
       - Mapfre2025
     # survey_enabled: true
