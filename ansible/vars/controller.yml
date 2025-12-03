@@ -6,8 +6,8 @@
 ### LABELS ###
 
 controller_labels:
-  - name: <user_label>
-    organization: <user_org>
+  - name: Mapfre2025
+    organization: Mapfre2025
 
 
 ### JOB TEMPLATES ###
@@ -17,13 +17,13 @@ controller_templates:
   - name: "[SC25] Test Template"
     description: "New Template created as part of SC25"
     job_type: run
-    inventory: Summit25
-    project: <user_project>
+    inventory: Config as Code Inventory
+    project: Summit25 CICD Project
     playbook: playbooks/test.yml
-    credential: "AAP Credential"
-    organization: Summit25
+    credential: "Linux Credential"
+    organization: CaC
     labels:
-      - <user_label>
+      - Mapfre2025
     # survey_enabled: true
     # survey_spec:
     #   name: <survey_name>
