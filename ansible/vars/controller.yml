@@ -12,7 +12,7 @@ controller_templates:
     description: "New Template created as part of SC25"
     job_type: run
     inventory: Default Mapfre2025 Inventory
-    project: Mapfre_2025
+    project: Mapfre2025
     playbook: "{{ local_clone_path }}/playbooks/test.yml"
     credential:
       - "Linux Credential"
