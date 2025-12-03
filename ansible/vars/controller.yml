@@ -8,7 +8,7 @@ controller_labels:
 
 controller_templates:
 
-  - name: "[SC25] Test Template"
+  - name: "[Z] Test Template"
     description: "New Template created as part of SC25"
     job_type: run
     inventory: Default Mapfre2025 Inventory
