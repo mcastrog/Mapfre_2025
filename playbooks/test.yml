@@ -26,8 +26,9 @@
       loop_control:
         label: "{{ item.path }}"
 
-    - ansible.builtin.debug:
+    - name: Debug
+      ansible.builtin.debug:
         msg: "Created file {{ item.path }} with content: {{ item.content }}"
       loop: "{{ files_to_create }}"
       loop_control:
-        label: "{{ item.path }}" 
+        label: "{{ item.path }}"
